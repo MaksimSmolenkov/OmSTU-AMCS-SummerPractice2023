@@ -6,10 +6,7 @@ public class SquareEquation
     {
         double[] answer;
         double eps= 1e-9;
-        if (a = 0)
-        {
-            throw new System.ArgumentException();
-        }
+        
         if ((-eps < a && a < eps)||Double.IsNaN(a) || Double.IsNaN(b) || Double.IsNaN(c) || Double.IsPositiveInfinity(a)|| Double.IsPositiveInfinity(b)|| Double.IsPositiveInfinity(c) || Double.IsNegativeInfinity(a)|| Double.IsNegativeInfinity(b)|| Double.IsNegativeInfinity(c))
         {
             throw new System.ArgumentException();
