@@ -6,7 +6,7 @@ public class SquareEquation
     {
         double[] answer;
         double eps= 1e-9;
-        if (a < 0)
+        if (a = 0)
         {
             throw new System.ArgumentException();
         }
