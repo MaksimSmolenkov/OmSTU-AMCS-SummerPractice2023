@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="1" branch-rate="1" version="1.9" timestamp="1687881875" lines-covered="22" lines-valid="22" branches-covered="26" branches-valid="26">
+  <sources>
+    <source>/</source>
+  </sources>
+  <packages>
+    <package name="SquareEquationLib" line-rate="1" branch-rate="1" complexity="26">
+      <classes>
+        <class name="SquareEquationLib.SquareEquation" filename="home/ubuntu/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/SquareEquation.cs" line-rate="1" branch-rate="1" complexity="26">
+          <methods>
+            <method name="Solve" signature="(System.Double,System.Double,System.Double)" line-rate="1" branch-rate="1" complexity="26">
+              <lines>
+                <line number="5" hits="15" branch="False" />
+                <line number="7" hits="15" branch="False" />
+                <line number="9" hits="15" branch="True" condition-coverage="100% (22/22)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="100%" />
+                    <condition number="18" type="jump" coverage="100%" />
+                    <condition number="26" type="jump" coverage="100%" />
+                    <condition number="34" type="jump" coverage="100%" />
+                    <condition number="42" type="jump" coverage="100%" />
+                    <condition number="50" type="jump" coverage="100%" />
+                    <condition number="58" type="jump" coverage="100%" />
+                    <condition number="66" type="jump" coverage="100%" />
+                    <condition number="74" type="jump" coverage="100%" />
+                    <condition number="82" type="jump" coverage="100%" />
+                    <condition number="95" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="10" hits="12" branch="False" />
+                <line number="11" hits="12" branch="False" />
+                <line number="13" hits="3" branch="False" />
+                <line number="15" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="131" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+                <line number="19" hits="1" branch="False" />
+                <line number="20" hits="1" branch="False" />
+                <line number="22" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="195" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="3" branch="False" />
+                <line number="33" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="15" branch="False" />
+            <line number="7" hits="15" branch="False" />
+            <line number="9" hits="15" branch="True" condition-coverage="100% (22/22)">
+              <conditions>
+                <condition number="14" type="jump" coverage="100%" />
+                <condition number="18" type="jump" coverage="100%" />
+                <condition number="26" type="jump" coverage="100%" />
+                <condition number="34" type="jump" coverage="100%" />
+                <condition number="42" type="jump" coverage="100%" />
+                <condition number="50" type="jump" coverage="100%" />
+                <condition number="58" type="jump" coverage="100%" />
+                <condition number="66" type="jump" coverage="100%" />
+                <condition number="74" type="jump" coverage="100%" />
+                <condition number="82" type="jump" coverage="100%" />
+                <condition number="95" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="10" hits="12" branch="False" />
+            <line number="11" hits="12" branch="False" />
+            <line number="13" hits="3" branch="False" />
+            <line number="15" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="131" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="19" hits="1" branch="False" />
+            <line number="20" hits="1" branch="False" />
+            <line number="22" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="195" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="3" branch="False" />
+            <line number="33" hits="3" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
