@@ -15,8 +15,16 @@ public class SquareEquation
         if (d>=eps)
         {
             answer = new double[2];
-            answer[0] = (-(b + Math.Sign(b) * Math.Sqrt(d)) / 2);
-            answer[1] = c / answer[0];
+            if (b==0)
+            {
+                answer[0] = Math.Sqrt(d) / 2;
+                answer[1] = c / answer[0];
+            }
+            else
+            {
+                answer[0] = (-(b + Math.Sign(b) * Math.Sqrt(d)) / 2);
+                answer[1] = c / answer[0];
+            }
         }
 
         else if (Math.Abs(d)<eps)

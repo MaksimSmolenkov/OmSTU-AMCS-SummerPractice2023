@@ -3,12 +3,14 @@ namespace BDD.Tests;
 using TechTalk.SpecFlow;
 using System;
 using System.Linq;
+using SquareEquationLib;
 
 [Binding]
-public class SquareEquation
+public class StepDefinitions
 {
+    
     private double eps = 1e-9;
-    private double result;
+    private double[] result;
     private double a, b, c;
     private Exception excep = new Exception();
     [When("вычисляются корни квадратного уравнения")]
@@ -89,7 +91,39 @@ public class SquareEquation
         b = r1;
         c = double.NegativeInfinity;
     }
-    
+
+    [Given(@"Квадратное уравнение с коэффициентами \(NaN, (.*), (.*)\)")]
+    public void AIsNaN(double r0, double r1)
+    {
+        a = double.NaN;
+        b = r0;
+        c = r1;
+    }
+
+    [Given(@"Квадратное уравнение с коэффициентами \((.*), NaN, (.*)\)")]
+    public void BIsNaN(double r0, double r1)
+    {
+        a = r0;
+        b = double.NaN;
+        c = r1;
+    }
+
+    [Given(@"Квадратное уравнение с коэффициентами \((.*), (.*), NaN\)")]
+    public void CIsNaN(double r0, double r1)
+    {
+        a = r0;
+        b = r1;
+        c = double.NaN;
+    }
+
+    [Given(@"Квадратное уравнение с коэффициентами \((.*), (.*), (.*)\)")]
+    public void GoodCoef(double r0, double r1, double r2 )
+    {
+        a = r0;
+        b = r1;
+        c = r2;
+    }
+
     [Then("выбрасывается исключение ArgumentException")]
     public void ThrowException()
     {
