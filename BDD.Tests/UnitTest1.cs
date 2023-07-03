@@ -13,6 +13,7 @@ public class StepDefinitions
     private double[] result;
     private double a, b, c;
     private Exception excep = new Exception();
+    
     [When("вычисляются корни квадратного уравнения")]
     public void AddTheRoots()
     { 
@@ -130,6 +131,6 @@ public class StepDefinitions
     [Then("выбрасывается исключение ArgumentException")]
     public void ThrowException()
     {
-        Assert.ThrowsAsync<ArgumentException>(() => throw excep);
+        Assert.ThrowsAsync<ArgumentException>(() => SquareEquation.Solve(a, b, c);
     }
 }
