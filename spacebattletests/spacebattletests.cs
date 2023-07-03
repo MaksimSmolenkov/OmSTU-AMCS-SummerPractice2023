@@ -8,6 +8,9 @@ public class UnitTest1
     private double[] res = new double[2];
     private double[] start = new double[2];
     private double[] speed = new double[2];
+    private double[] badres = new double[2];
+    private double[] badstart = new double[2];
+    private double[] badspeed = new double[2];
     private Exception excep = new Exception();
     
     [When("происходит прямолинейное равномерное движение без деформации")]
