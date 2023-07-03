@@ -9,6 +9,7 @@ public class UnitTest1
     private double[] start = new double[2];
     private double[] speed = new double[2];
     private Exception excep = new Exception();
+    
     [When("происходит прямолинейное равномерное движение без деформации")]
     public void Move()
     {
@@ -42,12 +43,14 @@ public class UnitTest1
         start[0] = Double.NaN;
         start[1] = Double.NaN;
     }
+    
     [Given(@"скорость корабля определить невозможно")]
     public void NoSpeed()
     {
         speed[0] = Double.NaN;
         speed[1] = Double.NaN;
     }
+    
     [Given(@"изменить положение в пространстве космического корабля невозможно")]
     public void NoMove()
     {
@@ -65,6 +68,6 @@ public class UnitTest1
     [Then(@"возникает ошибка Exception")]
     public void Error()
     {
-        Assert.ThrowsAsync<ArgumentException>(() => throw excep);
+        Assert.ThrowsAsync<ArgumentException>(() => SpaceBattle.StraightMove(start, speed));
     }
 }
