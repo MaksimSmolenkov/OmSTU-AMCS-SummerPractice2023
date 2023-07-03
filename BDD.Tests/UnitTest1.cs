@@ -131,6 +131,6 @@ public class StepDefinitions
     [Then("выбрасывается исключение ArgumentException")]
     public void ThrowException()
     {
-        Assert.ThrowsAsync<ArgumentException>(() => SquareEquation.Solve(a, b, c);
+        Assert.Throws<ArgumentException>(() => SquareEquation.Solve(a, b, c);
     }
 }
