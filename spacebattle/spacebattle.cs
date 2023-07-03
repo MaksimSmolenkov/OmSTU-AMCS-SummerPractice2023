@@ -18,7 +18,7 @@ public class SpaceBattle
             finish[0] = start[0] + speed[0];
             finish[1] = start[1] + speed[1];
         }
-        if (finish == empty || finish[0] == double.NaN || finish[1] == double.NaN || finish[0] == double.PositiveInfinity || finish[1] == double.PositiveInfinity || finish[0] == double.NegativeInfinity || finish[1] == double.NegativeInfinity)
+        if (finish == empty || Double.IsNaN(finish[0]) || Double.IsNaN(finish[1])| finish[0] == double.PositiveInfinity || finish[1] == double.PositiveInfinity || finish[0] == double.NegativeInfinity || finish[1] == double.NegativeInfinity)
         {
             throw new System.ArgumentException();
         }
