@@ -11,7 +11,7 @@ public class SpaceBattle
         else
         {
             double[] finish = {start[0] + speed[0], start[1] + finish[1]};
+            return finish;
         }
-        return finish;
     }
 }
