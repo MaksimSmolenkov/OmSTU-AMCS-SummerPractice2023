@@ -68,6 +68,6 @@ public class UnitTest1
     [Then(@"возникает ошибка Exception")]
     public void Error()
     {
-        Assert.Throws<ArgumentException>(() => SpaceBattle.StraightMove(badstart, badspeed));
+        Assert.Throws<ArgumentException>(() => SpaceBattle.StraightMove(start, speed));
     }
 }
