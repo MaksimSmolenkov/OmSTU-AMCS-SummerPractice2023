@@ -40,22 +40,22 @@ public class UnitTest1
     [Given(@"космический корабль, положение в пространстве которого невозможно определить")]
     public void NoStart()
     {
-        start[0] = Double.NaN;
-        start[1] = Double.NaN;
+        badstart[0] = Double.NaN;
+        badstart[1] = Double.NaN;
     }
     
     [Given(@"скорость корабля определить невозможно")]
     public void NoSpeed()
     {
-        speed[0] = Double.NaN;
-        speed[1] = Double.NaN;
+        badspeed[0] = Double.NaN;
+        badspeed[1] = Double.NaN;
     }
     
     [Given(@"изменить положение в пространстве космического корабля невозможно")]
     public void NoMove()
     {
-        res[0] = Double.NaN;
-        res[1] = Double.NaN;
+        badres[0] = Double.NaN;
+        badres[1] = Double.NaN;
     }
     
     [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
@@ -68,6 +68,6 @@ public class UnitTest1
     [Then(@"возникает ошибка Exception")]
     public void Error()
     {
-        Assert.ThrowsAsync<ArgumentException>(() => SpaceBattle.StraightMove(start, speed));
+        Assert.ThrowsAsync<ArgumentException>(() => SpaceBattle.StraightMove(badstart, badspeed));
     }
 }
