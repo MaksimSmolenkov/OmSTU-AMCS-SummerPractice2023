@@ -8,6 +8,9 @@ public class UnitTest1
     private double[] res = new double[2];
     private double[] start = new double[2];
     private double[] speed = new double[2];
+    private double[] badres = new double[2];
+    private double[] badstart = new double[2];
+    private double[] badspeed = new double[2];
     private Exception excep = new Exception();
     
     [When("происходит прямолинейное равномерное движение без деформации")]
@@ -40,22 +43,22 @@ public class UnitTest1
     [Given(@"космический корабль, положение в пространстве которого невозможно определить")]
     public void NoStart()
     {
-        start[0] = Double.PositiveInfinity;
-        start[1] = Double.PositiveInfinity;
+        badstart[0] = Double.PositiveInfinity;
+        badstart[1] = Double.PositiveInfinity;
     }
     
     [Given(@"скорость корабля определить невозможно")]
     public void NoSpeed()
     {
-        speed[0] = Double.PositiveInfinity;
-        speed[1] = Double.PositiveInfinity;
+        badspeed[0] = Double.PositiveInfinity;
+        badspeed[1] = Double.PositiveInfinity;
     }
     
     [Given(@"изменить положение в пространстве космического корабля невозможно")]
     public void NoMove()
     {
-        res[0] = Double.PositiveInfinity;
-        res[1] = Double.PositiveInfinity;
+        badres[0] = Double.PositiveInfinity;
+        badres[1] = Double.PositiveInfinity;
     }
     
     [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
@@ -68,6 +71,6 @@ public class UnitTest1
     [Then(@"возникает ошибка Exception")]
     public void Error()
     {
-        Assert.Throws<ArgumentException>(() => SpaceBattle.StraightMove(start, speed));
+        Assert.Throws<ArgumentException>(() => SpaceBattle.StraightMove(badstart, badspeed));
     }
 }
