@@ -40,22 +40,22 @@ public class UnitTest1
     [Given(@"космический корабль, положение в пространстве которого невозможно определить")]
     public void NoStart()
     {
-        start[0] = Double.NaN;
-        start[1] = double.NaN;
+        start[0] = Double.PositiveInfinity;
+        start[1] = Double.PositiveInfinity;
     }
     
     [Given(@"скорость корабля определить невозможно")]
     public void NoSpeed()
     {
-        speed[0] = Double.NaN;
-        speed[1] = Double.NaN;
+        speed[0] = Double.PositiveInfinity;
+        speed[1] = Double.PositiveInfinity;
     }
     
     [Given(@"изменить положение в пространстве космического корабля невозможно")]
     public void NoMove()
     {
-        res[0] = Double.NaN;
-        res[1] = Double.NaN;
+        res[0] = Double.PositiveInfinity;
+        res[1] = Double.PositiveInfinity;
     }
     
     [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
