@@ -25,12 +25,14 @@ public class StepDefinitions
             excep =  e;
         }
     }
+    
     [Then(@"квадратное уравнение имеет два корня \((.*), (.*)\) кратности один")]
     public void TwoRoots(double r0, double r1)
     {
         double[] expected = {r0, r1};
         Assert.Equal(expected, result);
     }
+    
     [Then(@"квадратное уравнение имеет один корень (.*) кратности два")]
     public void OneRoot(double r0)
     {
@@ -44,6 +46,7 @@ public class StepDefinitions
         double[] expected = {};
         Assert.Equal(expected, result);
     }
+    
     [Given(@"Квадратное уравнение с коэффициентами \(Double\.PositiveInfinity, (.*), (.*)\)")]
     public void AIsPositiveInfinity(int r0, int r1)
     {
@@ -129,5 +132,4 @@ public class StepDefinitions
     {
         Assert.ThrowsAsync<ArgumentException>(() => throw excep);
     }
-
 }
