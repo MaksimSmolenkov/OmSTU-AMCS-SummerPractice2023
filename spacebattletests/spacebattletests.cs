@@ -8,9 +8,6 @@ public class UnitTest1
     private double[] res = new double[2];
     private double[] start = new double[2];
     private double[] speed = new double[2];
-    private double[] badres = new double[2];
-    private double[] badstart = new double[2];
-    private double[] badspeed = new double[2];
     private Exception excep = new Exception();
     
     [When("происходит прямолинейное равномерное движение без деформации")]
@@ -43,22 +40,22 @@ public class UnitTest1
     [Given(@"космический корабль, положение в пространстве которого невозможно определить")]
     public void NoStart()
     {
-        badstart[0] = Double.NaN;
-        badstart[1] = double.NaN;
+        start[0] = Double.NaN;
+        start[1] = double.NaN;
     }
     
     [Given(@"скорость корабля определить невозможно")]
     public void NoSpeed()
     {
-        badspeed[0] = Double.NaN;
-        badspeed[1] = Double.NaN;
+        speed[0] = Double.NaN;
+        speed[1] = Double.NaN;
     }
     
     [Given(@"изменить положение в пространстве космического корабля невозможно")]
     public void NoMove()
     {
-        badres[0] = Double.NaN;
-        badres[1] = Double.NaN;
+        res[0] = Double.NaN;
+        res[1] = Double.NaN;
     }
     
     [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
