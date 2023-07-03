@@ -43,22 +43,22 @@ public class UnitTest1
     [Given(@"космический корабль, положение в пространстве которого невозможно определить")]
     public void NoStart()
     {
-        badstart[0] = double.NaN;
+        badstart[0] = Double.NaN;
         badstart[1] = double.NaN;
     }
     
     [Given(@"скорость корабля определить невозможно")]
     public void NoSpeed()
     {
-        badspeed[0] = double.NaN;
-        badspeed[1] = double.NaN;
+        badspeed[0] = Double.NaN;
+        badspeed[1] = Double.NaN;
     }
     
     [Given(@"изменить положение в пространстве космического корабля невозможно")]
     public void NoMove()
     {
-        badres[0] = double.NaN;
-        badres[1] = double.NaN;
+        badres[0] = Double.NaN;
+        badres[1] = Double.NaN;
     }
     
     [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
