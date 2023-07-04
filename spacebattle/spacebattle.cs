@@ -18,13 +18,52 @@ public class SpaceBattle
             finish[0] = start[0] + speed[0];
             finish[1] = start[1] + speed[1];
         }
+
         if (CanMove == false)
+        {
+            throw new System.ArgumentException();
+        }     
+        else
+        {
+            return finish;
+        }
+    }
+
+    public static double Fuel(double FuelConsumption, double FuelReserve)
+    {
+        if (FuelReserve <= FuelConsumption)
         {
             throw new System.ArgumentException();
         }
         else
         {
-            return finish;
+            return FuelReserve - FuelConsumption;
+        }
+    }
+
+    public static double Turn(double angle, double change, bool CanTurn)
+    {
+        double NewAngle;
+        if (Double.IsNaN(angle) || angle == Double.PositiveInfinity || angle == Double.NegativeInfinity)
+        {
+            throw new System.ArgumentException();
+        }
+        else if (Double.IsNaN(change) || change == Double.PositiveInfinity || change == Double.NegativeInfinity)
+        {
+            throw new System.ArgumentException();
+        }
+        else 
+        {
+            NewAngle = angle + change;
+        }
+        
+        if (CanTurn == false)
+        {
+            throw new System.ArgumentException();
+        }
+        else
+        {
+            return NewAngle;
         }
     }
 }
