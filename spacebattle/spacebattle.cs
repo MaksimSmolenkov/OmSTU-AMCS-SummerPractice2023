@@ -1,7 +1,7 @@
 ﻿namespace spacebattle;
 public class SpaceBattle
 {
-    public static double[] StraightMove(double[] start, double[] speed)
+    public static double[] StraightMove(double[] start, double[] speed, bool CanMove)
     {
         double[] empty = new double[] {};
         double[] finish = new double[2];
@@ -18,7 +18,7 @@ public class SpaceBattle
             finish[0] = start[0] + speed[0];
             finish[1] = start[1] + speed[1];
         }
-        if (finish == empty || Double.IsNaN(finish[0]) || Double.IsNaN(finish[1])| finish[0] == double.PositiveInfinity || finish[1] == double.PositiveInfinity || finish[0] == double.NegativeInfinity || finish[1] == double.NegativeInfinity)
+        if (CanMove == false)
         {
             throw new System.ArgumentException();
         }
